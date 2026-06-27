@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditi Menon — ECE Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- background trace layer -->
+<div class="board-bg" aria-hidden="true">
+  <svg class="trace-svg" viewBox="0 0 1440 4000" preserveAspectRatio="none">
+    <path class="trace-path" d="M -50 80 H 300 L 340 120 V 300 L 380 340 H 1440" />
+    <path class="trace-path trace-2" d="M -50 900 H 200 L 240 940 V 1400 L 280 1440 H 1440" />
+    <path class="trace-path trace-3" d="M -50 1900 H 500 L 540 1940 V 2400 L 580 2440 H 1440" />
+    <path class="trace-path trace-4" d="M -50 3100 H 350 L 390 3140 V 3500 L 430 3540 H 1440" />
+  </svg>
+</div>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-mark">⏚</span>
+      <span class="logo-text">A.MENON<span class="logo-dim">/ECE</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-pin="1">HOME</a></li>
+      <li><a href="#about" class="nav-link" data-pin="2">ABOUT</a></li>
+      <li><a href="#projects" class="nav-link" data-pin="3">PROJECTS</a></li>
+      <li><a href="#skills" class="nav-link" data-pin="4">SKILLS</a></li>
+      <li><a href="#certifications" class="nav-link" data-pin="5">CERTS</a></li>
+      <li><a href="#contact" class="nav-link" data-pin="6">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="led" id="led"></span> SYSTEM ONLINE — DESIGNATOR: U1</p>
+      <h1 class="hero-title">
+        Hi, I'm <span class="accent">Aditi Menon.</span><br>
+        I build the circuits<br>
+        between idea<span class="cursor-blink">_</span>and signal.
+      </h1>
+      <p class="hero-sub">
+        Electronics &amp; Communication Engineering student. I design, solder, and debug
+        embedded systems — from power rails to protocol stacks — and write the firmware
+        that makes them talk.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects <span class="btn-arrow">→</span></a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-item"><span class="meta-label">VCC</span><span class="meta-value">3.3V – 5V Logic</span></div>
+        <div class="meta-item"><span class="meta-label">PKG</span><span class="meta-value">Kerala, India</span></div>
+        <div class="meta-item"><span class="meta-label">REV</span><span class="meta-value">B.Tech · Final Year</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 380 420" class="chip-svg">
+        <rect x="90" y="90" width="200" height="240" rx="6" class="chip-body"/>
+        <text x="190" y="200" class="chip-label" text-anchor="middle">ECE</text>
+        <text x="190" y="226" class="chip-sublabel" text-anchor="middle">U1 · CORE</text>
+        <circle cx="115" cy="115" r="4" class="chip-dot"/>
+        <!-- pins left -->
+        <g class="pin-group">
+          <line x1="30" y1="120" x2="90" y2="120" class="pin-line"/>
+          <line x1="30" y1="150" x2="90" y2="150" class="pin-line"/>
+          <line x1="30" y1="180" x2="90" y2="180" class="pin-line"/>
+          <line x1="30" y1="210" x2="90" y2="210" class="pin-line"/>
+          <line x1="30" y1="240" x2="90" y2="240" class="pin-line"/>
+          <line x1="30" y1="270" x2="90" y2="270" class="pin-line"/>
+          <line x1="30" y1="300" x2="90" y2="300" class="pin-line"/>
+        </g>
+        <!-- pins right -->
+        <g class="pin-group">
+          <line x1="290" y1="120" x2="350" y2="120" class="pin-line"/>
+          <line x1="290" y1="150" x2="350" y2="150" class="pin-line"/>
+          <line x1="290" y1="180" x2="350" y2="180" class="pin-line"/>
+          <line x1="290" y1="210" x2="350" y2="210" class="pin-line"/>
+          <line x1="290" y1="240" x2="350" y2="240" class="pin-line"/>
+          <line x1="290" y1="270" x2="350" y2="270" class="pin-line"/>
+          <line x1="290" y1="300" x2="350" y2="300" class="pin-line"/>
+        </g>
+        <!-- pins top -->
+        <g class="pin-group">
+          <line x1="120" y1="30" x2="120" y2="90" class="pin-line"/>
+          <line x1="160" y1="30" x2="160" y2="90" class="pin-line"/>
+          <line x1="220" y1="30" x2="220" y2="90" class="pin-line"/>
+          <line x1="260" y1="30" x2="260" y2="90" class="pin-line"/>
+        </g>
+        <!-- pins bottom -->
+        <g class="pin-group">
+          <line x1="120" y1="330" x2="120" y2="390" class="pin-line"/>
+          <line x1="160" y1="330" x2="160" y2="390" class="pin-line"/>
+          <line x1="220" y1="330" x2="220" y2="390" class="pin-line"/>
+          <line x1="260" y1="330" x2="260" y2="390" class="pin-line"/>
+        </g>
+        <circle class="pulse-dot" r="4">
+          <animateMotion dur="3.2s" repeatCount="indefinite"
+            path="M 30 120 H 90 M 90 120" />
+        </circle>
+      </svg>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+    <span>SCROLL</span>
+    <span class="scroll-line"></span>
+  </a>
+</header>
+
+<main>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-inner">
+    <p class="section-tag">// 02 · ABOUT</p>
+    <h2 class="section-title">Datasheet<span class="accent">.</span></h2>
+
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>
+          I'm a final-year Electronics &amp; Communication Engineering student who got hooked
+          the first time a breadboard circuit actually worked on the first try — and has been
+          chasing that feeling ever since. Most of the time it doesn't work on the first try,
+          and that's where the real learning happens.
+        </p>
+        <p>
+          My work sits at the intersection of hardware and firmware: designing analog front-ends,
+          writing register-level embedded C, and getting protocols like CAN, UART, and I2C to
+          actually shake hands with each other. I care about signal integrity as much as code
+          quality — a beautiful driver means nothing on a noisy rail.
+        </p>
+        <p>
+          Outside coursework, I spend evenings in the lab fixing what I broke in the afternoon,
+          reading datasheets like bedtime stories, and slowly building a personal library of
+          modules I can reuse on the next build.
+        </p>
+      </div>
+
+      <div class="spec-table" role="table" aria-label="Quick specifications">
+        <div class="spec-row spec-head" role="row">
+          <span role="columnheader">PARAMETER</span><span role="columnheader">VALUE</span>
+        </div>
+        <div class="spec-row" role="row"><span>Education</span><span>B.Tech, ECE — Final Year</span></div>
+        <div class="spec-row" role="row"><span>Core Stack</span><span>Embedded C, Python, Verilog</span></div>
+        <div class="spec-row" role="row"><span>Focus Area</span><span>Embedded Systems &amp; Comms</span></div>
+        <div class="spec-row" role="row"><span>Lab Hours</span><span>&gt; 400 hrs (est.)</span></div>
+        <div class="spec-row" role="row"><span>Soldering Iron Temp</span><span>350°C, lead-free</span></div>
+        <div class="spec-row" role="row"><span>Status</span><span><span class="led led-sm"></span> Open to internships</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section section-alt">
+  <div class="section-inner">
+    <p class="section-tag">// 03 · PROJECTS</p>
+    <h2 class="section-title">Build Log<span class="accent">.</span></h2>
+    <p class="section-intro">Selected modules from the bench. Each one taught me something the textbook skipped.</p>
+
+    <div class="project-grid" id="projectGrid">
+
+      <article class="card project-card" data-filter="comms protocol">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="card-head">
+          <span class="card-ref">REF · CAN-01</span>
+          <span class="card-status status-done">STABLE</span>
+        </div>
+        <h3 class="card-title">CAN Bus Module</h3>
+        <p class="card-desc">
+          Two-node CAN network built with MCP2515 controllers over SPI, tested for message
+          arbitration, error-frame handling, and bus-off recovery under induced noise.
+        </p>
+        <ul class="card-tags">
+          <li>MCP2515</li><li>SPI</li><li>Embedded C</li><li>CAN 2.0B</li>
+        </ul>
+        <a href="#" class="card-link">View repository <span class="btn-arrow">→</span></a>
+      </article>
+
+      <article class="card project-card" data-filter="analog measurement">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="card-head">
+          <span class="card-ref">REF · VM-02</span>
+          <span class="card-status status-done">STABLE</span>
+        </div>
+        <h3 class="card-title">Digital Voltmeter</h3>
+        <p class="card-desc">
+          0–30V DC voltmeter using a resistor-divider front end, ADC sampling on an ATmega328P,
+          and a calibrated 7-segment readout accurate to ±0.05V.
+        </p>
+        <ul class="card-tags">
+          <li>ATmega328P</li><li>ADC</li><li>7-Segment</li><li>Analog FE</li>
+        </ul>
+        <a href="#" class="card-link">View repository <span class="btn-arrow">→</span></a>
+      </article>
+
+      <article class="card project-card" data-filter="comms protocol">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="card-head">
+          <span class="card-ref">REF · UART-03</span>
+          <span class="card-status status-done">STABLE</span>
+        </div>
+        <h3 class="card-title">UART Communication Link</h3>
+        <p class="card-desc">
+          Full-duplex UART link between two microcontrollers with custom framing, parity
+          checking, and a Python-side serial monitor for live packet inspection.
+        </p>
+        <ul class="card-tags">
+          <li>UART</li><li>PySerial</li><li>Framing</li><li>C</li>
+        </ul>
+        <a href="#" class="card-link">View repository <span class="btn-arrow">→</span></a>
+      </article>
+
+      <article class="card project-card" data-filter="wireless robotics">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="card-head">
+          <span class="card-ref">REF · WFC-04</span>
+          <span class="card-status status-progress">ITERATING</span>
+        </div>
+        <h3 class="card-title">Wi-Fi Controlled Car</h3>
+        <p class="card-desc">
+          ESP32-driven RC car with a browser-based control dashboard over local Wi-Fi,
+          live telemetry, and an L298N motor driver stage for direction and speed control.
+        </p>
+        <ul class="card-tags">
+          <li>ESP32</li><li>L298N</li><li>WebSocket</li><li>HTML/JS</li>
+        </ul>
+        <a href="#" class="card-link">View repository <span class="btn-arrow">→</span></a>
+      </article>
+
+      <article class="card project-card" data-filter="power analog">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="card-head">
+          <span class="card-ref">REF · PSU-05</span>
+          <span class="card-status status-done">STABLE</span>
+        </div>
+        <h3 class="card-title">Regulated Power Supply</h3>
+        <p class="card-desc">
+          Dual-rail ±12V linear supply with a step-down transformer, bridge rectifier,
+          capacitive filtering, and LM7812/7912 regulation with short-circuit protection.
+        </p>
+        <ul class="card-tags">
+          <li>LM7812</li><li>Rectifier</li><li>Linear Reg.</li><li>PCB Design</li>
+        </ul>
+        <a href="#" class="card-link">View repository <span class="btn-arrow">→</span></a>
+      </article>
+
+      <article class="card project-card add-project" data-filter="">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="add-icon">+</div>
+        <h3 class="card-title">Next Build</h3>
+        <p class="card-desc">Currently socketed — slot reserved for the next module on the bench.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="section-inner">
+    <p class="section-tag">// 04 · SKILLS</p>
+    <h2 class="section-title">Component Library<span class="accent">.</span></h2>
+    <p class="section-intro">Tools and concepts I reach for most often, rated by hands-on hours, not hype.</p>
+
+    <div class="skills-grid">
+
+      <div class="skill-block">
+        <h3 class="skill-cat">Embedded &amp; Firmware</h3>
+        <div class="skill-bar-row">
+          <span class="skill-name">Embedded C / C++</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:92%"></div></div>
+          <span class="skill-pct">92%</span>
+        </div>
+        <div class="skill-bar-row">
+          <span class="skill-name">Microcontrollers (AVR/STM32/ESP32)</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:88%"></div></div>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="skill-bar-row">
+          <span class="skill-name">RTOS Fundamentals</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:65%"></div></div>
+          <span class="skill-pct">65%</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-cat">Communication Protocols</h3>
+        <div class="skill-bar-row">
+          <span class="skill-name">UART / SPI / I2C</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:90%"></div></div>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="skill-bar-row">
+          <span class="skill-name">CAN Protocol</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:78%"></div></div>
+          <span class="skill-pct">78%</span>
+        </div>
+        <div class="skill-bar-row">
+          <span class="skill-name">Wi-Fi / Bluetooth (ESP32)</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:80%"></div></div>
+          <span class="skill-pct">80%</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-cat">Analog &amp; Power Electronics</h3>
+        <div class="skill-bar-row">
+          <span class="skill-name">Circuit Design &amp; Analysis</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:85%"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-bar-row">
+          <span class="skill-name">PCB Design (KiCad)</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:74%"></div></div>
+          <span class="skill-pct">74%</span>
+        </div>
+        <div class="skill-bar-row">
+          <span class="skill-name">Power Supply Design</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:80%"></div></div>
+          <span class="skill-pct">80%</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-cat">Software &amp; Tools</h3>
+        <div class="skill-bar-row">
+          <span class="skill-name">Python</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:83%"></div></div>
+          <span class="skill-pct">83%</span>
+        </div>
+        <div class="skill-bar-row">
+          <span class="skill-name">MATLAB / Simulink</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:70%"></div></div>
+          <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-bar-row">
+          <span class="skill-name">Git &amp; GitHub</span>
+          <div class="skill-bar"><div class="skill-fill" style="--fill:86%"></div></div>
+          <span class="skill-pct">86%</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tool-chips">
+      <span class="chip">Oscilloscope</span>
+      <span class="chip">Logic Analyzer</span>
+      <span class="chip">Multimeter</span>
+      <span class="chip">Soldering &amp; Rework</span>
+      <span class="chip">KiCad</span>
+      <span class="chip">Arduino IDE</span>
+      <span class="chip">STM32CubeIDE</span>
+      <span class="chip">Proteus</span>
+      <span class="chip">VS Code</span>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section section-alt">
+  <div class="section-inner">
+    <p class="section-tag">// 05 · CERTIFICATIONS</p>
+    <h2 class="section-title">Calibration Records<span class="accent">.</span></h2>
+    <p class="section-intro">Courses and certifications completed — proof the modules above didn't come from nowhere.</p>
+
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-top">
+          <span class="cert-icon">▣</span>
+          <span class="card-status status-done">VERIFIED</span>
+        </div>
+        <h3 class="cert-title">Embedded Systems &amp; IoT</h3>
+        <p class="cert-issuer">NPTEL / Swayam — 2025</p>
+        <p class="cert-desc">12-week course covering microcontroller architecture, sensor interfacing, and real-time IoT data pipelines.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-top">
+          <span class="cert-icon">▣</span>
+          <span class="card-status status-done">VERIFIED</span>
+        </div>
+        <h3 class="cert-title">Digital Signal Processing</h3>
+        <p class="cert-issuer">Coursera — 2024</p>
+        <p class="cert-desc">Filter design, FFT analysis, and sampling theory applied to real audio and sensor data sets.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-top">
+          <span class="cert-icon">▣</span>
+          <span class="card-status status-done">VERIFIED</span>
+        </div>
+        <h3 class="cert-title">PCB Design with KiCad</h3>
+        <p class="cert-issuer">Udemy — 2024</p>
+        <p class="cert-desc">Schematic capture, footprint creation, routing, and DRC-clean board export ready for fabrication.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-top">
+          <span class="cert-icon">▣</span>
+          <span class="card-status status-done">VERIFIED</span>
+        </div>
+        <h3 class="cert-title">Communication Systems</h3>
+        <p class="cert-issuer">NPTEL / Swayam — 2023</p>
+        <p class="cert-desc">Analog &amp; digital modulation techniques, noise analysis, and channel capacity fundamentals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="section-inner">
+    <p class="section-tag">// 06 · CONTACT</p>
+    <h2 class="section-title">Close the Loop<span class="accent">.</span></h2>
+    <p class="section-intro">
+      Got a project, an internship opening, or just want to talk about why your CAN bus
+      keeps going into bus-off state? My inbox is open.
+    </p>
+
+    <div class="contact-grid">
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about the build..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-side">
+        <a class="contact-link" href="mailto:aditi.menon@example.com">
+          <span class="contact-label">EMAIL</span>
+          <span class="contact-value">aditi.menon@example.com</span>
+        </a>
+        <a class="contact-link" href="https://github.com/" target="_blank" rel="noopener">
+          <span class="contact-label">GITHUB</span>
+          <span class="contact-value">github.com/aditimenon</span>
+        </a>
+        <a class="contact-link" href="https://linkedin.com/" target="_blank" rel="noopener">
+          <span class="contact-label">LINKEDIN</span>
+          <span class="contact-value">linkedin.com/in/aditimenon</span>
+        </a>
+        <a class="contact-link" href="#" target="_blank" rel="noopener">
+          <span class="contact-label">RESUME</span>
+          <span class="contact-value">Download PDF ↓</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>Designed &amp; built by Aditi Menon · <span class="footer-mono">v1.0 · Last flashed June 2026</span></p>
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
