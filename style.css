@@ -748,7 +748,6 @@ body::before {
 .contact-side {
   display: flex;
   flex-direction: column;
-  gap: 14px;
 }
 .contact-link {
   background: var(--surface);
