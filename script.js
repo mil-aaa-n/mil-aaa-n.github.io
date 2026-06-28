@@ -74,11 +74,13 @@ toTop.addEventListener('click', () => {
 // ============================================
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  formStatus.textContent = '> Message captured locally. Wire this form up to Formspree, EmailJS, or your own backend to actually send it.';
-  contactForm.reset();
-});
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formStatus.textContent = '> Message captured locally. Wire this form up to Formspree, EmailJS, or your own backend to actually send it.';
+    contactForm.reset();
+  });
+}
 // ============================================
 // Navbar background intensity on scroll
 // ============================================
