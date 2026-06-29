@@ -774,6 +774,17 @@ body::before {
   border-color: var(--copper);
   transform: translateX(4px);
 }
+.contact-link.cert-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
 .contact-label {
   font-family: var(--font-mono);
   font-size: 10.5px;
